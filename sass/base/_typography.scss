@@ -1,0 +1,173 @@
+body {
+    font-family: "Montserrat-black", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey;
+}
+
+.heading-primary {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,
+            $color-heading-dark,
+            $color-heading-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+    @include respond(tab-land) {
+        font-size: 2.9rem;
+    }
+    @include respond(tab-port) {
+        font-size: 2.4rem;
+    }
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+
+    &--main {
+        color: $color-black-primary;
+        display: block;
+        font-size: 3.2rem;
+        letter-spacing: 1.1rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right,
+                $color-heading-dark,
+                $color-heading-light);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+
+        @media only screen and (max-width:95.4em) {
+            font-size: 3rem;
+        }
+
+        @include respond(tab-land) {
+            font-size: 2.7rem;
+        }
+
+        @media only screen and (max-width:66.9em) {
+            font-size: 2.8rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.1rem;
+        }
+    }
+
+    &--sub {
+        color: $color-black-primary;
+        display: block;
+        font-size: 3.2rem;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right,
+                $color-heading-dark,
+                $color-heading-light);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+
+        @media only screen and (max-width:95.4em) {
+            font-size: 2.1rem;
+        }
+
+        @include respond(tab-land) {
+            font-size: 2.1rem;
+        }
+
+        @media only screen and (max-width:66.9em) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.heading-secondary {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,
+            $color-heading-dark,
+            $color-heading-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+
+    @include respond(tab-land) {
+        font-size: 2.4rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 1.9rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.heading-primary--white {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.1rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-heading-white-dark, $color-heading-white-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+    @include respond(phone) {
+        font-size: 2.9rem;
+    }
+}
+
+.heading-tertiary {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,
+            $color-heading-dark,
+            $color-heading-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+    @include respond(phone) {
+        font-size: 1.2rem;
+    }
+}
+
+.heading-secondary--paragraph {
+    font-family: "Ubuntu";
+    font-weight: 200;
+    font-size: 2rem;
+    text-align: justify;
+
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 1.4rem;
+    }
+}
+
+p {
+    font-family: "Ubuntu", sans-serif;
+}

@@ -1,0 +1,96 @@
+.feedback {
+    &__container {
+        transform: skewX(-15deg);
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+        padding: 3rem;
+        border-radius: 3px;
+        font-size: 1.6rem;
+        width: 70%;
+        margin: 0 2rem 0 4rem;
+
+        @include respond(tab-land) {
+            transform: skewX(0deg);
+        }
+    }
+
+    &__box-1 {
+        color: $color-grey;
+        transform: skewX(15deg);
+        hyphens: auto;
+
+        @include respond(tab-land) {
+            transform: skewX(0deg);
+        }
+    }
+
+    &__shape {
+        width: 10rem;
+        height: 10rem;
+        float: left;
+        margin-right: 2rem;
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+        background-size: cover;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        clip-path: circle(50% at 50% 50%);
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+    &__caption {
+        position: absolute;
+        font-size: 1.7rem;
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    &__box-1:hover &__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &__box-1:hover &__img {
+        transform: scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}
+
+.feedback__responsive {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40rem;
+        width: 60rem;
+
+        @include respond(tab-land) {
+            height: 100%;
+            width: 100%;
+        }
+        @media only screen and (max-width: 26em) {
+            width: 80vw;
+        }
+    }
+
+    &-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-images {
+        flex: 0 0 30%;
+        height: 10rem;
+    }
+}

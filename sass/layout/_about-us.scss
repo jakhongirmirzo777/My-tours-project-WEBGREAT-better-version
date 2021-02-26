@@ -1,0 +1,71 @@
+.about-us__box {
+    text-align: left;
+    padding-right: 10rem;
+
+    @include respond(tab-port) {
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.about-us__images {
+    position: relative;
+}
+
+.images {
+    position: absolute;
+
+    &-1 {
+        height: 25rem;
+        width: 35rem;
+        top: 2rem;
+        left: 0;
+
+        @include respond(tab-land) {
+            height: 20rem;
+            width: 30rem;
+            top: 2rem;
+            left: 0;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &-2 {
+        height: 25rem;
+        width: 25rem;
+        top: 32rem;
+        left: 5rem;
+
+        @include respond(tab-land) {
+            height: 20rem;
+            width: 20rem;
+            top: 32rem;
+            left: 5rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &-3 {
+        height: 30rem;
+        width: 30rem;
+        top: 14rem;
+        left: 20rem;
+
+        @include respond(tab-land) {
+            height: 25rem;
+            width: 23rem;
+            top: 14rem;
+            left: 20rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+}

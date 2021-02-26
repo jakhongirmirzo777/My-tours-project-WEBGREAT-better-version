@@ -1,0 +1,106 @@
+.composition {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr;
+        grid-gap: 6rem;
+        padding: 0 10%;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: "composition__box-1 composition__box-2";
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 1fr;
+            grid-column: 2/2;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1.5fr;
+            grid-template-rows: 1fr;
+            grid-column: 1/1;
+        }
+    }
+
+    &__box-1 {
+        grid-area: composition__box-1;
+        position: relative;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__box-2 {
+        grid-area: composition__box-2;
+        text-align: left;
+        position: relative;
+
+        @include respond(tab-port) {
+            margin-left: auto;
+        }
+
+        @include respond(phone) {
+            margin-left: 10rem;
+        }
+
+        @media only screen and (max-width:39.375em) {
+            margin-left: 11rem;
+        }
+    }
+
+    &__image--mcbook {
+        height: 25rem;
+        width: 40rem;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+
+        @include respond (tab-land) {
+            height: 20rem;
+            width: 30rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__image--coffee {
+        height: 15rem;
+        width: 20rem;
+        position: absolute;
+        top: 30rem;
+        left: 45rem;
+
+        @include respond (tab-land) {
+            height: 10rem;
+            width: 15rem;
+            top: 25rem;
+            left: 40rem;
+        }
+
+        @media only screen and (max-width:62em) {
+            top: 28rem;
+            left: 30rem;
+        }
+
+        @include respond (tab-port) {
+            height: 10rem;
+            width: 15rem;
+            top: 27rem;
+            left: 10rem;
+        }
+
+        @media only screen and (max-width:44em) {
+            top: 30rem;
+        }
+
+        @include respond (phone) {
+            top: 25rem;
+        }
+
+        @media only screen and (max-width:39.375em) {
+            display: none;
+        }
+    }
+}
